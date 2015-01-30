@@ -1,0 +1,12 @@
+<div class="jumbotron">
+  <h2>Welcome to Phoenix!</h2>
+  <p class="lead">Phoenix is an Elixir Web Framework targeting full-featured, fault tolerant applications with realtime functionality.</p>
+</div>
+
+<h1 class="jumbotron">
+  <div class="flash_notice">
+    <div class="row">
+      <p><%= get_flash(@conn, :notice) %></p>
+    </div>
+  </div>
+</h1>
