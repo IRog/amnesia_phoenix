@@ -26,6 +26,6 @@ defmodule Mix.Tasks.Install do
     # end
 
     # Stop mnesia so it can flush everything and keep the data sane.
-    #Amnesia.stop
+    Amnesia.stop
   end
 end

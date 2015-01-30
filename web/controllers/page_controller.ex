@@ -1,31 +1,15 @@
 defmodule HelloPhoenix.PageController do
   use Phoenix.Controller
   #use Amnesia
-  use DB
+  #use DB
+  import Trans_action
 
   plug :action
 
   def index(conn, _params) do
-  	Amnesia.transaction! do
-		john = %User{name: "John", email: "john@example.com"} |> User.write
-		# Now let's add some messages.
-
-		john |> User.add_message "john's message"
-
-  	end
-
-  	IO.puts "woot"
-  	
-  	Amnesia.transaction! do
-	   	john = User.read(1)
-
-		# # Now let's read his messages and print them all.
-		john |> User.messages |> Enum.each &IO.puts(&1.content)
-
-  		IO.puts "in transaction"
-  	end
-
-  	IO.puts "woot after trans"
+  	pid1 = spawn(Trans_action, :write_read, ["John", "j@example.com", "hiiii1", 1])
+  	pid2 = spawn(Trans_action, :write_read, ["Bob", "b@example.com", "hiiii2", 2])
+  	pid3 = spawn(Trans_action, :write_read, ["Carl", "c@example.com", "hiiii3", 3])
 
   	#IO.puts trans_block
 
