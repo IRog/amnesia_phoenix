@@ -1,7 +1,10 @@
 use DB
 
 defmodule Trans_action do
+	#import ExProf.Macro
+
 	def write_read(name, email, message, id) do
+		#profile do
 		Amnesia.transaction! do
 			person = %User{name: name, email: email} |> User.write
 			# Now let's add some messages.
@@ -25,5 +28,6 @@ defmodule Trans_action do
 	  	end
 
 	  	IO.puts "woot after trans"
+	  	#end
 	end
 end

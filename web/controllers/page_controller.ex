@@ -3,14 +3,16 @@ defmodule HelloPhoenix.PageController do
   #use Amnesia
   #use DB
   import Trans_action
+  import ExProf.Macro
 
   plug :action
 
   def index(conn, _params) do
-  	pid1 = spawn(Trans_action, :write_read, ["John", "j@example.com", "hiiii1", 1])
-  	pid2 = spawn(Trans_action, :write_read, ["Bob", "b@example.com", "hiiii2", 2])
-  	pid3 = spawn(Trans_action, :write_read, ["Carl", "c@example.com", "hiiii3", 3])
-
+  	profile do
+  		pid1 = spawn(Trans_action, :write_read, ["John", "j@example.com", "hiiii1", 1])
+  		pid2 = spawn(Trans_action, :write_read, ["Bob", "b@example.com", "hiiii2", 2])
+  		pid3 = spawn(Trans_action, :write_read, ["Carl", "c@example.com", "hiiii3", 3])
+  	end
   	#IO.puts trans_block
 
     conn 

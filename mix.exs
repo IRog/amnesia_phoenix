@@ -15,7 +15,7 @@ defmodule HelloPhoenix.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [mod: {HelloPhoenix, []},
-     applications: [:phoenix, :cowboy, :logger, :amnesia]]
+     applications: [:phoenix, :cowboy, :logger, :amnesia, :exprof]]
   end
 
   # Specifies your project dependencies
@@ -24,6 +24,7 @@ defmodule HelloPhoenix.Mixfile do
   defp deps do
     [{:phoenix, "~> 0.8.0"},
      {:cowboy, "~> 1.0"},
-     {:amnesia, git: "https://github.com/meh/amnesia.git"}]
+     {:amnesia, git: "https://github.com/meh/amnesia.git"},
+     {:exprof, git: "https://github.com/parroty/exprof.git"}]
   end
 end
