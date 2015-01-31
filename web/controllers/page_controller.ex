@@ -8,7 +8,7 @@ defmodule HelloPhoenix.PageController do
   plug :action
 
 #defmodule Trans_action has a decent amount of prints and the below can overflow a bit (too many db tables)
-#uses list comprehension for loop also will do with recursion eventually...
+#uses list comprehension for loop
   def index(conn, _params) do
   	profile do
 
