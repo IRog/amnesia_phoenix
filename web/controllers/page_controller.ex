@@ -19,6 +19,7 @@ defmodule HelloPhoenix.PageController do
 	  		pid3 = spawn(Trans_action, :write_read, ["Carl", "c@example.com", "hiiii3", 3333]) #replace 3333 with n for overflow
 	  	#end
   	end
+  	Amnesia.info
   	#IO.puts trans_block
 
     conn 
