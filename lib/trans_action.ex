@@ -8,7 +8,7 @@ defmodule Trans_action do
 			#IO.puts person.id
 			person |> User.add_message(message <> Integer.to_string(id))
 
-			person = User.read(person.id)
+			#person = User.read(person.id)
 
 			# # Now let's read his messages and print them all.
 			#person |> User.messages |> Enum.each &IO.puts(&1.content)
