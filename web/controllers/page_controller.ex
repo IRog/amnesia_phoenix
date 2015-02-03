@@ -6,8 +6,8 @@ defmodule HelloPhoenix.PageController do
 
   def index(conn, _params) do
   	profile do
-	  	for n <- 1..1000 do
-	  		spawn(Trans_action, :write_read, ["John #{n}", "j#{n}@example.com", "hiiii: ", n])
+	  	for n <- 1..10000 do
+	  		Task.async(Trans_action, :write_read, ["John #{n}", "j#{n}@example.com", "hiiii: ", n])
 	  	end
   	end
 
