@@ -1,4 +1,15 @@
-# HelloPhoenix
+# Amnesia Phoenix Benchmark
+
+A 10,000 synchronous transaction benchmark of mnesia with a async process per transaction using the amnesia wrapper for mnesia.
+
+See:
+
+hello_phoenix/lib/trans_action.ex
+and
+hello_phoenix/web/controllers/page_controller.ex
+
+for most relevant code
+
 
 To start your new Phoenix application:
 
