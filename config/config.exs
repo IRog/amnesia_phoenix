@@ -5,11 +5,17 @@
 # is restricted to this project.
 use Mix.Config
 
+# General application configuration
+config :amnesia_phoenix,
+  ecto_repos: [AmnesiaPhoenix.Repo]
+
 # Configures the endpoint
-config :hello_phoenix, HelloPhoenix.Endpoint,
+config :amnesia_phoenix, AmnesiaPhoenix.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "n/nhv5FXWZX0oh2XZwbrDisOXOfdHIU569TOZ2ReRVLv/XFKjfKjWH7C5DbQKZqe",
-  debug_errors: false
+  secret_key_base: "LHWMfH9ZGqEDIAs5559XJ/IEYYth2Et66/LOMBuSFLhdmNcPGHVxeCtJ4lMzz3RC",
+  render_errors: [view: AmnesiaPhoenix.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: AmnesiaPhoenix.PubSub,
+           adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,

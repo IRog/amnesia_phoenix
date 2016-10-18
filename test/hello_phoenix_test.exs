@@ -1,4 +1,4 @@
-defmodule HelloPhoenixTest do
+defmodule AmnesiaPhoenixTest do
   use ExUnit.Case
 
   test "the truth" do

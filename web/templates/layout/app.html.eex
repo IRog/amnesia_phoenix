@@ -7,8 +7,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello Phoenix!</title>
-    <link rel="stylesheet" href="/css/phoenix.css">
+    <title>Amnesia Phoenix!</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
@@ -20,7 +20,7 @@
         <span class="logo"></span>
       </div>
 
-      <%= @inner %>
+      <%= render @view_module, @view_template, assigns %>
 
       <div class="footer">
         <p><a href="http://phoenixframework.org">phoenixframework.org</a></p>

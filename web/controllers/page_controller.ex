@@ -1,8 +1,6 @@
-defmodule HelloPhoenix.PageController do
-  use Phoenix.Controller
+defmodule AmnesiaPhoenix.PageController do
+  use AmnesiaPhoenix.Web, :controller
   import ExProf.Macro
-
-  plug :action
 
   def index(conn, _params) do
   	profile do
@@ -15,6 +13,6 @@ defmodule HelloPhoenix.PageController do
 
     conn 
     |> put_flash(:notice, "dunnno. Wanted to try a flash message")
-    |> render "index.html"
+    |> render("index.html")
   end
 end

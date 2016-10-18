@@ -1,3 +1,3 @@
-defmodule HelloPhoenix.LayoutView do
-  use HelloPhoenix.View
+defmodule AmnesiaPhoenix.LayoutView do
+  use AmnesiaPhoenix.Web, :view
 end

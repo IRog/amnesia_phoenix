@@ -1,7 +1,8 @@
 use Mix.Config
 
-config :hello_phoenix, HelloPhoenix.Endpoint,
-  http: [port: System.get_env("PORT") || 4001]
+config :amnesia_phoenix, AmnesiaPhoenix.Endpoint,
+  http: [port: 4001],
+  server: false
 
 # Print only warnings and errors during test
 config :logger, level: :warn

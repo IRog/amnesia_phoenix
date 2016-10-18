@@ -11,10 +11,10 @@ use Mix.Config
 # Where those two env variables point to a file on
 # disk for the key and cert.
 
-config :hello_phoenix, HelloPhoenix.Endpoint,
-  url: [host: "example.com"],
-  http: [port: System.get_env("PORT")],
-  secret_key_base: "n/nhv5FXWZX0oh2XZwbrDisOXOfdHIU569TOZ2ReRVLv/XFKjfKjWH7C5DbQKZqe"
+config :amnesia_phoenix, AmnesiaPhoenix.Endpoint,
+  http: [port: {:system, "PORT"}],
+  url: [host: "example.com", port: 80],
+  cache_static_manifest: "priv/static/manifest.json"
 
 # Do not pring debug messages in production
 config :logger, level: :info
@@ -29,5 +29,5 @@ config :logger, level: :info
 # Alternatively, you can configure exactly which server to
 # start per endpoint:
 #
-#     config :hello_phoenix, HelloPhoenix.Endpoint, server: true
+#     config :amnesia_phoenix, AmnesiaPhoenix.Endpoint, server: true
 #
